@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Dec 28, 2020 at 02:04 PM
+- Server version: 10.4.17-MariaDB
+- PHP Version: 8.0.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="test" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="consultation">
+                CREATE TABLE `consultation` (
+                  `Ref` int(9) NOT NULL,
+                  `Datecons` varchar(10) NOT NULL,
+                  `nomMed` varchar(100) NOT NULL,
+                  `Diagnostic` varchar(500) NOT NULL,
+                  `posologie` varchar(100) NOT NULL,
+                  `analyse` varchar(100) NOT NULL,
+                  `radio` varchar(100) NOT NULL,
+                  `nom` varchar(100) NOT NULL,
+                  `spécialité` varchar(100) NOT NULL,
+                  PRIMARY KEY (`Ref`,`Datecons`,`nomMed`) USING BTREE,
+                  CONSTRAINT `consultation_ibfk_1` FOREIGN KEY (`Ref`) REFERENCES `dossier` (`Ref`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="dossier">
+                CREATE TABLE `dossier` (
+                  `Ref` int(9) NOT NULL AUTO_INCREMENT,
+                  `Nom` varchar(50) NOT NULL,
+                  `Prenom` varchar(50) NOT NULL,
+                  `Sexe` varchar(10) NOT NULL,
+                  `Jour naissance` varchar(2) NOT NULL,
+                  `Mois naissance` varchar(20) NOT NULL,
+                  `Année naissance` varchar(4) NOT NULL,
+                  `tel` varchar(8) NOT NULL,
+                  PRIMARY KEY (`Ref`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'test'
+    -->
+    <database name="test">
+        <!-- Table consultation -->
+        <table name="consultation">
+            <column name="Ref">1</column>
+            <column name="Datecons">12/03/2013</column>
+            <column name="nomMed">Panadol</column>
+            <column name="Diagnostic">Grippe</column>
+            <column name="posologie">1 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio"></column>
+            <column name="nom">Med Amine </column>
+            <column name="spécialité">Généraliste</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">1</column>
+            <column name="Datecons">16/08/2014</column>
+            <column name="nomMed">Fervex</column>
+            <column name="Diagnostic">fièvre</column>
+            <column name="posologie">1-2 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio"></column>
+            <column name="nom">AbdelMoulehem Mongi</column>
+            <column name="spécialité">Généraliste</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">1</column>
+            <column name="Datecons">27/12/2020</column>
+            <column name="nomMed">Doliprane</column>
+            <column name="Diagnostic">Grippe</column>
+            <column name="posologie">1 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio">Radio</column>
+            <column name="nom">Med Amine </column>
+            <column name="spécialité">Généraliste</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">9</column>
+            <column name="Datecons">10/02/2013</column>
+            <column name="nomMed">Muxol</column>
+            <column name="Diagnostic">mal à la gorge</column>
+            <column name="posologie">3 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio">Radio</column>
+            <column name="nom">Rezgui Mounir</column>
+            <column name="spécialité">Généraliste</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">13</column>
+            <column name="Datecons">27/12/2020</column>
+            <column name="nomMed">lanzor 30mg</column>
+            <column name="Diagnostic">je suis content	</column>
+            <column name="posologie">01 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio">Scanner </column>
+            <column name="nom">Dr aida</column>
+            <column name="spécialité">psy</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">14</column>
+            <column name="Datecons">27/12/2020</column>
+            <column name="nomMed">Doliprane</column>
+            <column name="Diagnostic">grippe</column>
+            <column name="posologie">2 par jour</column>
+            <column name="analyse"></column>
+            <column name="radio"></column>
+            <column name="nom">AbdelHmid</column>
+            <column name="spécialité">Généraliste</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">15</column>
+            <column name="Datecons">28/12/2020</column>
+            <column name="nomMed">poiuytr</column>
+            <column name="Diagnostic">azertyu</column>
+            <column name="posologie">mlkjhgf</column>
+            <column name="analyse"></column>
+            <column name="radio"></column>
+            <column name="nom">azerty</column>
+            <column name="spécialité">wxcv</column>
+        </table>
+        <table name="consultation">
+            <column name="Ref">15</column>
+            <column name="Datecons">28/12/2020</column>
+            <column name="nomMed">qsdfghj</column>
+            <column name="Diagnostic">azertyu</column>
+            <column name="posologie">mlkjhgf</column>
+            <column name="analyse">qsdfg</column>
+            <column name="radio">Radio Scanner IRM</column>
+            <column name="nom">nbvcx</column>
+            <column name="spécialité">mlkjhv</column>
+        </table>
+        <!-- Table dossier -->
+        <table name="dossier">
+            <column name="Ref">1</column>
+            <column name="Nom">Abdi</column>
+            <column name="Prenom">Mariem</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">30</column>
+            <column name="Mois naissance">Mai</column>
+            <column name="Année naissance">2000</column>
+            <column name="tel">27662229</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">2</column>
+            <column name="Nom">Jomaa</column>
+            <column name="Prenom">Aida</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">04</column>
+            <column name="Mois naissance">Octobre</column>
+            <column name="Année naissance">1972</column>
+            <column name="tel">93123456</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">3</column>
+            <column name="Nom">Do</column>
+            <column name="Prenom">Mari</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">15</column>
+            <column name="Mois naissance">Juin</column>
+            <column name="Année naissance">2015</column>
+            <column name="tel">12345678</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">4</column>
+            <column name="Nom">Abdi</column>
+            <column name="Prenom">Mari</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">31</column>
+            <column name="Mois naissance">Mai</column>
+            <column name="Année naissance">2001</column>
+            <column name="tel">27668823</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">5</column>
+            <column name="Nom">Jomaa</column>
+            <column name="Prenom">Afef</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">26</column>
+            <column name="Mois naissance">Mai</column>
+            <column name="Année naissance">1973</column>
+            <column name="tel">56987423</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">6</column>
+            <column name="Nom">Bou Houch</column>
+            <column name="Prenom">Omar</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">25</column>
+            <column name="Mois naissance">Avril</column>
+            <column name="Année naissance">2004</column>
+            <column name="tel">24356987</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">7</column>
+            <column name="Nom">Neji</column>
+            <column name="Prenom">Montassar</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">20</column>
+            <column name="Mois naissance">Novembre</column>
+            <column name="Année naissance">1999</column>
+            <column name="tel">98563274</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">8</column>
+            <column name="Nom">Marzouki</column>
+            <column name="Prenom">Maram</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">26</column>
+            <column name="Mois naissance">Juin</column>
+            <column name="Année naissance">2001</column>
+            <column name="tel">26947538</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">9</column>
+            <column name="Nom">Hamami</column>
+            <column name="Prenom">Aymen</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">02</column>
+            <column name="Mois naissance">Août</column>
+            <column name="Année naissance">1996</column>
+            <column name="tel">51973468</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">10</column>
+            <column name="Nom">Soltani</column>
+            <column name="Prenom">Ahmed</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">05</column>
+            <column name="Mois naissance">Décembre</column>
+            <column name="Année naissance">2000</column>
+            <column name="tel">56741239</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">11</column>
+            <column name="Nom">Dhaoui</column>
+            <column name="Prenom">Yosr</column>
+            <column name="Sexe">Féminin</column>
+            <column name="Jour naissance">02</column>
+            <column name="Mois naissance">Juillet</column>
+            <column name="Année naissance">1998</column>
+            <column name="tel">23456719</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">12</column>
+            <column name="Nom">Abelmoula</column>
+            <column name="Prenom">Mohsen</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">30</column>
+            <column name="Mois naissance">Janvier</column>
+            <column name="Année naissance">1965</column>
+            <column name="tel">91478563</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">13</column>
+            <column name="Nom">abdi</column>
+            <column name="Prenom">hatem</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">02</column>
+            <column name="Mois naissance">Juillet</column>
+            <column name="Année naissance">1964</column>
+            <column name="tel">96612771</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">14</column>
+            <column name="Nom">Abdallah</column>
+            <column name="Prenom">Mohamed</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">05</column>
+            <column name="Mois naissance">Mai</column>
+            <column name="Année naissance">2014</column>
+            <column name="tel">12345678</column>
+        </table>
+        <table name="dossier">
+            <column name="Ref">15</column>
+            <column name="Nom">Abdi</column>
+            <column name="Prenom">Marouen</column>
+            <column name="Sexe">Masculin</column>
+            <column name="Jour naissance">18</column>
+            <column name="Mois naissance">Septembre</column>
+            <column name="Année naissance">1995</column>
+            <column name="tel">12345678</column>
+        </table>
+    </database>
+</pma_xml_export>
